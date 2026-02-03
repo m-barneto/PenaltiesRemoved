@@ -5,9 +5,9 @@ import path from "path";
 import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
-import { VFS } from "@spt/utils/VFS";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { BaseClasses } from "@spt/models/enums/BaseClasses";
+import { FileSystemSync } from "@spt/utils/FileSystemSync";
 
 // #region ModConfig 
 interface ModConfig {
@@ -51,13 +51,13 @@ class PenaltiesRemoved implements IPostDBLoadMod {
     private logger: ILogger;
 
     public postDBLoad(container: DependencyContainer): void {
-        const vfs = container.resolve<VFS>("VFS");
+        const fileSystem = container.resolve<FileSystemSync>("FileSystemSync");
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
 
         this.logger = container.resolve<ILogger>("WinstonLogger");
         
-        this.modConfig = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")));
+        this.modConfig = jsonc.parse(fileSystem.read(path.resolve(__dirname, "../config/config.jsonc")));
 
         const items = databaseServer.getTables().templates.items;
 
