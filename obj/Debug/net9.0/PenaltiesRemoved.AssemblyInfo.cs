@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PenaltiesRemoved")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+413c03247f3c4d1aaf8fa8593d06673bf6b2f33f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e473805272fcdb736c2cb2fa7220aae4d2737d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PenaltiesRemoved")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PenaltiesRemoved")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
