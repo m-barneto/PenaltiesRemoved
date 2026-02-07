@@ -1,0 +1,14 @@
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.csproj.AssemblyReference.cache
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.AssemblyInfoInputs.cache
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.AssemblyInfo.cs
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.csproj.CoreCompileInputs.cache
+C:\Code\C#\PenaltiesRemoved\bin\Debug\net9.0\config.jsonc
+C:\Code\C#\PenaltiesRemoved\bin\Debug\net9.0\PenaltiesRemoved.deps.json
+C:\Code\C#\PenaltiesRemoved\bin\Debug\net9.0\PenaltiesRemoved.dll
+C:\Code\C#\PenaltiesRemoved\bin\Debug\net9.0\PenaltiesRemoved.pdb
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.dll
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\refint\PenaltiesRemoved.dll
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.pdb
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\ref\PenaltiesRemoved.dll
+C:\Code\C#\PenaltiesRemoved\obj\Debug\net9.0\PenaltiesRemoved.sourcelink.json
