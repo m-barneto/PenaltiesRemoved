@@ -19,7 +19,7 @@ public record ModMetadata : AbstractModMetadata {
     public override string Name { get; init; } = "PenaltiesRemoved";
     public override string Author { get; init; } = "Mattdokn";
     public override List<string>? Contributors { get; init; }
-    public override SemanticVersioning.Version Version { get; init; } = new("1.0.0");
+    public override SemanticVersioning.Version Version { get; init; } = new("1.3.1");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; }
@@ -76,7 +76,8 @@ public class PenaltiesRemoved(
                         props.DeafStrength = "None";
                     }
                 }
-            } else if (config.Weapons.Enabled) {
+            }
+            if (config.Weapons.Enabled) {
                 if (itemHelper.IsOfBaseclass(itemId, BaseClasses.MOD)) {
                     if (config.Weapons.RemoveErgoPenalty && props.Ergonomics < 0.0) {
                         props.Ergonomics = 0.0;
@@ -94,7 +95,8 @@ public class PenaltiesRemoved(
                         props.DurabilityBurnModificator = 1.0;
                     }
                 }
-            } else if (config.Ammo.Enabled) {
+            }
+            if (config.Ammo.Enabled) {
                 if (itemHelper.IsOfBaseclass(itemId, BaseClasses.AMMO)) {
                     if (config.Ammo.MisfireMultiplier != 1.0 && props.MisfireChance != 0.0) {
                         props.MisfireChance *= config.Ammo.MisfireMultiplier;
