@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.ComponentModel;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using SPTarkov.DI.Annotations;
@@ -94,6 +95,12 @@ public class PenaltiesRemoved(
                     if (config.Weapons.RemoveDurabilityBurnPenalty && props.DurabilityBurnModificator > 1.0) {
                         props.DurabilityBurnModificator = 1.0;
                     }
+                    if (config.Weapons.RemoveVelocityPenalty && props.Velocity < 0.0) {
+                        props.Velocity = 0.0;
+                    }
+                    if (config.Weapons.RemoveCoolingPenalty && props.CoolFactor < 1.0) {
+                        props.CoolFactor = 1.0;
+                    }
                 }
             }
             if (config.Ammo.Enabled) {
@@ -167,6 +174,9 @@ public record WeaponsConfig {
 
     // All attachments no longer change how quickly durability is reduced on the weapon
     public bool RemoveDurabilityBurnPenalty { get; set; }
+
+    // Barrels no longer apply a cooling penalty
+    public bool RemoveCoolingPenalty { get; set; }
 }
 
 public record AmmoConfig {
